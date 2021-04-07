@@ -1,1 +1,66 @@
-// TODO
+.banner{
+  display: flex;
+  justify-content: center;
+
+  margin: 0 auto;
+  height: 25rem;
+}
+
+.post{
+  margin-top: 5rem;
+
+  h1{
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .info{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 1.5rem;
+
+    div + div{
+      margin-left: 1.5rem;
+    }
+
+    div{
+      display: flex;
+      align-items: center;
+
+      svg{
+        margin-right: 0.5rem;
+
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
+  .postContent{
+    margin-top: 4.1rem;
+
+    h2{
+      font-size: 2.25rem;
+    }
+
+    p, ul{
+      margin: 3rem 0;
+    }
+
+    a{
+      color: var(--pink);
+    }
+  }
+}
+
+.loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1{
+    font-size: 8rem;
+    color: var(--gray-100);
+  }
+}

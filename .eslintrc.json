@@ -74,14 +74,11 @@
         "tsx": "never"
       }
     ],
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
-      {
-        "allowExpressions": true
-      }
-    ],
-    "@typescript-eslint/camelcase": "off"
-  },
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/no-unused-prop-types": "off"
+    },
   "settings": {
     "react": {
       "version": "detect"

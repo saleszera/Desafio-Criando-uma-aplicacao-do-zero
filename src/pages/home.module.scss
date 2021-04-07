@@ -1,1 +1,47 @@
-// TODO
+.posts{
+  margin-bottom: 4rem;
+
+  h1{
+    font-size: 1.75rem;
+    color: var(--gray-100);
+  }
+
+  a{
+    display: block;
+
+    & + a{
+      margin-top: 50px;
+    }
+
+    p{
+      color: var(--gray-300);
+      margin: 8px 0 25px 0;
+    }
+  }
+}
+
+.info{
+  display: flex;
+  flex-direction: row;
+  color: var(--gray-300);
+
+  div{
+    span{
+      margin-left: 8px;
+    };
+  }
+
+  & > div{
+    margin-right: 1.6rem;
+  }
+}
+
+.loadMore{
+  color: var(--pink);
+  font-weight: 600;
+  font-size: 1.125rem;
+  background: none;
+  border: none;
+
+  margin-top: 4rem;
+}
