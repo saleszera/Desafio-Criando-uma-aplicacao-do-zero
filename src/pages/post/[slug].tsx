@@ -112,7 +112,7 @@ export default function Post({ post }: PostProps): JSX.Element {
 export const getStaticPaths: GetStaticPaths = async () => {
   const prismic = getPrismicClient();
   const posts = await prismic.query(
-    [Prismic.predicates.at('document.type', 'posts')],
+    [Prismic.predicates.at('document.type', process.env.PRISMIC_DOCUMENT_TYPE)],
     {
       pageSize: 1,
     }
@@ -136,7 +136,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params;
 
   const prismic = getPrismicClient();
-  const response = await prismic.getByUID('post', String(slug), {});
+  const response = await prismic.getByUID(
+    process.env.PRISMIC_DOCUMENT_TYPE,
+    String(slug),
+    {}
+  );
 
   const post = {
     uid: response.uid,

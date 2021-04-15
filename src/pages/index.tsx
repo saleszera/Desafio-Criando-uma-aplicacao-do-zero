@@ -116,7 +116,7 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
   const postsResponse = await prismic.query(
-    [Prismic.predicates.at('document.type', 'post')],
+    [Prismic.predicates.at('document.type', process.env.PRISMIC_DOCUMENT_TYPE)],
     {
       pageSize: 1,
     }
